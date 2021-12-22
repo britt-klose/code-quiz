@@ -51,7 +51,9 @@ var qustnEl = document.getElementById ("questions");
 function startquiz () {
     qustnEl.innerText=questionArray[currentQuestion].question
     //repeat for other 4 buttons. chnge innertext to number
-    //dont use for loop cuz easier to do it other way
+    //dont use for loop cuz easier to do it other way. cud use if stmt but also kinda complex
 }
 //add event listener for 4 buttons(m/c optns). when hit button chnge innertext =currentquestn=current++
 startButton.addEventListener("click", startquiz)
+
+//add in your own readme
