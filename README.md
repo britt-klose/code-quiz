@@ -6,22 +6,21 @@ This project entails encoding a webpage (using HTML, JS and Web APIs, and CSS)th
 The user is only able to see one question at a time, and are unable to move backward once a question has been answered. As soon as the user selects an answer choice they are shown the next question. If they answer a question incorrectly, 5 seconds is subtrated from the timer; which will be displayed to the user on the timer. The quiz will end when the time has run out, or the user has finished the quiz. Afterwards the user can then save their initials and their score. The highest scores will be stored so a user can compare their progress to other students. 
 
 Questons in quiz with option choices and correct answers (* right answer)
-
-1. what does API stand for?
-    - Application Programming Interface *
-    - Application Proffessional Intercommunication 
-    - Autimated Programming Interface
-    - Authorized preface Intercom 
+1. A(n) __ is used to store data in single variable
+    - Array
+    - Console Log
+    - Parenthesis
+    - Index
 2. What does the arithmetic operator % do?
     - The world may never know
     - Asks what the remainder is after a number has been divided *
     - Asks what percent a number is of another number
     - None are right because % is a comparison operator
-3. A(n) __ is used to store data in single variable
-    - Array
-    - Console Log
-    - Parenthesis
-    - Index
+3. what does API stand for?
+    - Application Programming Interface *
+    - Application Proffessional Intercommunication 
+    - Autimated Programming Interface
+    - Authorized preface Intercom 
 4. what is DOM or the Document Object Model?
     - A tree of objects that represent the opened page *
     - It is used to retrieve resources from a web server and then displays them on a user's device
