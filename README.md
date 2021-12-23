@@ -73,6 +73,7 @@ Questons in quiz with option choices and correct answers (* right answer)
     - A boolean
     - Undefined
     - A string *
+    - A variable
 14. A keyup event is fired when___
     - A key is realeased *
     - A key is pressed
