@@ -15,6 +15,11 @@ body {
     box-shadow: 0 0 10px #000 inset;
     background-color: rgb(31, 83, 31);
   }
+ #start-btn:focus {
+     background-color: rgb(216, 213, 209);
+     color:rgb(216, 213, 209);
+     box-shadow: 0 0 10px rgb(216, 213, 209) inset;
+ } 
 #questions {
     font-size: 20px;
     font-weight: bold;
@@ -44,3 +49,14 @@ body {
   .optn-btn:focus {
       background-color: rgb(95, 157, 238);
   }
+
+  @media (max-width: 740px) {
+    .optn-btn {
+      width: 48%;
+  }
+}
+  @media (max-width: 740px) {
+    #start-btn {
+    width: 48%;
+  }
+}
