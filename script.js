@@ -184,21 +184,29 @@ var questionArray = [
 /*console.log (questionArray[0]);*/
 console.log (questionArray[0].option1);
 var currentQuestion= 0
+var questionCount=0
 var qustnEl = document.getElementById ("questions");
 var timeEl = document.querySelector ("h3");
 var minutesLeft= 30;
+var countEl=document.getElementById("count");
+
+function setCounterText(){
+    countEl.textContent = questionCount;
+}
+ 
 
 function setTime(){
     var timerInterval = setInterval(function(){
         minutesLeft--;
         timeEl.textContent= "Minutes left: " + minutesLeft;
 
-        if (minutesLeft === 0){
+        if (minutesLeft ===0) //|| questionCount>20)
+        {
             clearInterval (timerInterval);
             endQuiz();
         }
     }, 60000); //delay between intervals set to 1 minute. Timer doesn't show up until 1 minute has passed
-
+//is there way to have timer show immediately?
 
     // if stmt for incorrect answer //
     //var selectedChoice === questionArray[option1, option2, option3, option4];
@@ -219,7 +227,7 @@ function endQuiz() {
 function startquiz () {
     qustnEl.innerText=questionArray[currentQuestion].question;
     setTime();
-
+    setCounterText();
     //repeat for other 4 buttons. chnge innertext to number
 }
 console.log(startquiz);
@@ -239,21 +247,28 @@ var optn3Button= document.getElementById ("optn-c");
 var optn4Button= document.getElementById ("optn-d");
 
 //Function to chose an answer and go to next question
-function finalAnswerA() {
+function finalAnswerA() {qustnEl.innerText=questionArray[currentQuestion++].question;
+    questionCount++;
+    setCounterText();
     //optn1Button.number=questionArray[currentQuestion++].question
-    qustnEl.innerText=questionArray[currentQuestion++].question
     //event.stopPropagation();
 };
 function finalAnswerB() {
-    qustnEl.innerText=questionArray[currentQuestion++].question
+    qustnEl.innerText=questionArray[currentQuestion++].question;
+    questionCount++;
+    setCounterText();
     //event.stopPropagation();
 };
 function finalAnswerC() {
-    qustnEl.innerText=questionArray[currentQuestion++].question
+    qustnEl.innerText=questionArray[currentQuestion++].question;
+    questionCount++;
+    setCounterText();
     //event.stopPropagation();
 };
 function finalAnswerD() {
-    qustnEl.innerText=questionArray[currentQuestion++].question
+    qustnEl.innerText=questionArray[currentQuestion++].question;
+    questionCount++;
+    setCounterText();
     //event.stopPropagation();
 };
 console.log(optn1Button)
