@@ -3,7 +3,7 @@ Description of the project:
 
 This project entails encoding a webpage (using HTML, JS and Web APIs, and CSS)that presents a user with a timed quiz. The quiz is made up of 20 multiple choice questions about Java Script basics and using Web APIs in Java Script. As soon as the user hits 'begin', the timer begins and the user is presented with the first question. 
 
-The user is only able to see one question at a time, and are unable to move backward once a question has been answered. As soon as the user selects an answer choice they are shown the next question. If they answer a question incorrectly, 5 seconds is subtrated from the timer; which will be displayed to the user on the timer. The quiz will end when the time has run out, or the user has finished the quiz. Afterwards the user can then save their initials and their score. The highest scores will be stored so a user can compare their progress to other students. 
+The user is only able to see one question at a time, and are unable to move backward once a question has been answered. As soon as the user selects an answer choice they are shown the next question. The timer will begin at 30 minutes. If a user answers a question incorrectly, 1 minute is subtrated from the timer; which will be displayed to the user on the timer. The quiz will end when the time has run out, or the user has finished the quiz. Afterwards the user can then save their initials and their score. The highest scores will be stored so a user can compare their progress to other students. 
 
 Questons in quiz with option choices and correct answers (* right answer)
 1. A(n) __ is used to store data in single variable
@@ -16,12 +16,12 @@ Questons in quiz with option choices and correct answers (* right answer)
     - Asks what the remainder is after a number has been divided *
     - Asks what percent a number is of another number
     - None are right because % is a comparison operator
-3. what does API stand for?
+3. What does API stand for?
     - Application Programming Interface *
     - Application Proffessional Intercommunication 
     - Autimated Programming Interface
     - Authorized preface Intercom 
-4. what is DOM or the Document Object Model?
+4. What is DOM or the Document Object Model?
     - A tree of objects that represent the opened page *
     - It is used to retrieve resources from a web server and then displays them on a user's device
     - A set of methods, properties, and URLs that are used to interact with components
@@ -69,7 +69,7 @@ Questons in quiz with option choices and correct answers (* right answer)
     - Everything must be in quotation marks
     - Use concatenation operator (+) *
 13. What is the following code
-    "my name is Olivia"
+    "Hi I'm Olivia"
     - A boolean
     - Undefined
     - A string *
