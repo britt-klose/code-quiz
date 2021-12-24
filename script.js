@@ -1,4 +1,5 @@
 var startButton = document.getElementById("start-btn");
+console.log(startButton);
 var questionArray = [
     {
         question: "A(n) __ is used to store data in single variable.", 
@@ -181,6 +182,12 @@ var questionArray = [
 
     },
 ]
+//Varibales for answer choice buttons
+var optn1Button= document.getElementById ("optn-a");
+console.log(optn1Button);
+var optn2Button= document.getElementById ("optn-b");
+var optn3Button= document.getElementById ("optn-c");
+var optn4Button= document.getElementById ("optn-d");
 
 var currentQuestion= 0
 var questionCount=0
@@ -190,12 +197,14 @@ var minutesLeft= 30;
 var countEl=document.getElementById("count");
 
 function setCounterText(){
+    console.log("SetCounter");
     countEl.textContent = "Question: " + questionCount +"/20" ;
 }
 /*function displayQstn(){
     qustnEl.textContent=questionArray.question
 }*/
 function setTime(){
+    console.log("settime");
     var timerInterval = setInterval(function(){
         minutesLeft--;
         timeEl.textContent= "Minutes left: " + minutesLeft;
@@ -207,6 +216,7 @@ function setTime(){
             endQuiz();
         }
     }, 1000); // 60000);
+    
     //delay between intervals set to 1 minute. Timer doesn't show up until 1 minute has passed
 //is there way to have timer show immediately?
 
@@ -221,6 +231,7 @@ function setTime(){
 }
 //function to end quiz
 function endQuiz() {
+    console.log("endquiz");
     timeEl.textContent="Quiz over";
     countEl.textContent="";
     qustnEl.textContent="";
@@ -228,8 +239,8 @@ function endQuiz() {
 }
 
 //Function to begin the quiz
-function startquiz (event) {
-    event.stopPropagation();
+function startquiz () {
+    console.log("startquiz")
     qustnEl.innerText=questionArray[currentQuestion].question;
     countEl.innerText=questionArray[questionCount].question;
     optn1Button.innerText=questionArray[currentQuestion].option1;
@@ -241,69 +252,73 @@ function startquiz (event) {
     setCounterText();
     //repeat for other 4 buttons. chnge innertext to number
 }
-console.log(startquiz);
-startButton.addEventListener("click", startquiz);
-/*{event.stopPropagation()
-    startquiz(); */
-//start button should disapear after it's pressed and
-// timer should begin counting down 
 
-
-//Varibales for answer choice buttons
-var optn1Button= document.getElementById ("optn-a");
-var optn2Button= document.getElementById ("optn-b");
-var optn3Button= document.getElementById ("optn-c");
-var optn4Button= document.getElementById ("optn-d");
 
 //Function to chose an answer and go to next question
 function finalAnswerA() {
-    //qustnEl.innerText=questionArray[currentQuestion++].question;
-    qustnEl.innerText=questionArray[currentQuestion++].question;
-    optn1Button.innerText=questionArray[currentQuestion++].option1;
+    //console.log("answerA");
+    //add logs for each fa
+    qustnEl.innerText=questionArray[currentQuestion].question;
+    optn1Button.innerText=questionArray[currentQuestion].option1;
     //currentQuestion++
     if (questionCount<20){
         questionCount++;
-    }
-        else {
-            endQuiz();
+    }else {dispatchEvent();
         }
+    if (currentQuestion<20){
+        currentQuestion++;
+    }else{dispatchEvent();}
     setCounterText();
     //event.stopPropagation();
 }
 function finalAnswerB() {
-    qustnEl.innerText=questionArray[currentQuestion++].question;
-    optn2Button.innerText=questionArray[currentQuestion++].option2;
+    qustnEl.innerText=questionArray[currentQuestion].question;
+    optn2Button.innerText=questionArray[currentQuestion].option2;
     if (questionCount<20){
         questionCount++;
-    }else {
-        endQuiz();}
+    }else {endQuiz();}
+    if (currentQuestion<20){
+        currentQuestion++;
+    }else{endQuiz();}
     //questionCount++;
     setCounterText();
     //event.stopPropagation();
 }
 function finalAnswerC() {
-    qustnEl.innerText=questionArray[currentQuestion++].question;
-    optn3Button.innerText=questionArray[currentQuestion++].option3;
+    qustnEl.innerText=questionArray[currentQuestion].question;
+    optn3Button.innerText=questionArray[currentQuestion].option3;
+    if (currentQuestion<20){
+        currentQuestion++;
+    }else{endQuiz();}
     if (questionCount<20){
         questionCount++;
-    } else {
-        endQuiz();}
+    } else {endQuiz();}
     setCounterText();
     //event.stopPropagation();
 }
 function finalAnswerD() {
-    qustnEl.innerText=questionArray[currentQuestion++].question;
-    optn4Button.innerText=questionArray[currentQuestion++].option4;
+    qustnEl.innerText=questionArray[currentQuestion].question;
+    optn4Button.innerText=questionArray[currentQuestion].option4;
     if (questionCount<20){
         questionCount++;
-    } else {
-        endQuiz();}
+    } else {endQuiz();}
+    if (currentQuestion<20){
+        currentQuestion++;
+    }else{endQuiz();}
     setCounterText();
     //event.stopPropagation();
 };
-console.log(optn1Button)
+//console.log(optn1Button)
 //add event listener for 4 buttons(m/c optns). when hit button chnge innertext -->currentquestn=current++
 optn1Button.addEventListener ("click", finalAnswerA);
 optn2Button.addEventListener ("click", finalAnswerB);
 optn3Button.addEventListener ("click", finalAnswerC);
 optn4Button.addEventListener ("click", finalAnswerD);
+
+
+//console.log("startquiz");
+startButton.addEventListener("click", startquiz);
+/*{event.stopPropagation()
+    startquiz(); */
+//start button should disapear after it's pressed and
+// timer should begin counting down 
