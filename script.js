@@ -215,7 +215,7 @@ function setTime(){
             //qustnEl.textContent="";
             endQuiz();
         }
-    }, 1000); // 60000);
+    }, 60000);
     
     //delay between intervals set to 1 minute. Timer doesn't show up until 1 minute has passed
 //is there way to have timer show immediately?
