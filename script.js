@@ -1,3 +1,4 @@
+//start quiz button
 var startButton = document.getElementById("start-btn");
 console.log(startButton);
 var questionArray = [
@@ -189,20 +190,32 @@ var optn2Button= document.getElementById ("optn-b");
 var optn3Button= document.getElementById ("optn-c");
 var optn4Button= document.getElementById ("optn-d");
 
+//Variables for counting elements
 var currentQuestion= 0
 var questionCount=0
+    //tels reader how many questions they have finished
 var qustnEl = document.getElementById ("questions");
 var timeEl = document.getElementById ("time");
 var minutesLeft= 30;
 var countEl=document.getElementById("count");
 
+//Calculating score elements
+/*var totalPoints= questionArray.length;
+console.log(totalPoints);
+var finalScore=document.getElementById("final-score");
+var scoreEl= questionArray[correctanswer] */
+
+/*if (optnChoice.matches("correctanswer")) */
+
+/*function calculateScore (totalPoints, scoreEl){
+    return parseFloat(totalPoints) + parseFloat(scoreEl);
+}*/
+
 function setCounterText(){
     console.log("SetCounter");
     countEl.textContent = "Question: " + questionCount +"/20" ;
 }
-/*function displayQstn(){
-    qustnEl.textContent=questionArray.question
-}*/
+
 function setTime(){
     console.log("settime");
     var timerInterval = setInterval(function(){
