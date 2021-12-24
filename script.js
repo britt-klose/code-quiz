@@ -258,54 +258,47 @@ var optn4Button= document.getElementById ("optn-d");
 //Function to chose an answer and go to next question
 function finalAnswerA() {
     //qustnEl.innerText=questionArray[currentQuestion++].question;
-    qustnEl.innerText=questionArray[currentQuestion].question;
-    currentQuestion++
+    qustnEl.innerText=questionArray[currentQuestion++].question;
+    optn1Button.innerText=questionArray[currentQuestion++].option1;
+    //currentQuestion++
     if (questionCount<20){
         questionCount++;
     }
         else {
-            clearInterval (timerInterval);
             endQuiz();
         }
     setCounterText();
-    optn1Button.innerText=questionArray[currentQuestion++].option1
     //event.stopPropagation();
 }
 function finalAnswerB() {
-    qustnEl.innerText=questionArray[currentQuestion].question;
-    currentQuestion++
+    qustnEl.innerText=questionArray[currentQuestion++].question;
+    optn2Button.innerText=questionArray[currentQuestion++].option2;
     if (questionCount<20){
         questionCount++;
     }else {
         endQuiz();}
     //questionCount++;
     setCounterText();
-    optn2Button.innerText=questionArray[currentQuestion++].option2
-    //displayQstn()
     //event.stopPropagation();
 }
 function finalAnswerC() {
-    qustnEl.innerText=questionArray[currentQuestion].question;
-    currentQuestion++
+    qustnEl.innerText=questionArray[currentQuestion++].question;
+    optn3Button.innerText=questionArray[currentQuestion++].option3;
     if (questionCount<20){
         questionCount++;
     } else {
         endQuiz();}
     setCounterText();
-    optn3Button.innerText=questionArray[currentQuestion++].option3
-   // displayQstn()
     //event.stopPropagation();
 }
 function finalAnswerD() {
-    qustnEl.innerText=questionArray[currentQuestion].question;
-    currentQuestion++
+    qustnEl.innerText=questionArray[currentQuestion++].question;
+    optn4Button.innerText=questionArray[currentQuestion++].option4;
     if (questionCount<20){
         questionCount++;
     } else {
         endQuiz();}
     setCounterText();
-    optn4Button.innerText=questionArray[currentQuestion++].option4
-   // displayQstn()
     //event.stopPropagation();
 };
 console.log(optn1Button)
