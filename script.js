@@ -255,11 +255,15 @@ function startquiz () {
 
 
 //Function to chose an answer and go to next question
+//Way to have only one function instead of 4 (1 for each button)??
 function finalAnswerA() {
     //console.log("answerA");
     //add logs for each fa
     qustnEl.innerText=questionArray[currentQuestion].question;
     optn1Button.innerText=questionArray[currentQuestion].option1;
+    optn2Button.innerText=questionArray[currentQuestion].option2;
+    optn3Button.innerText=questionArray[currentQuestion].option3;
+    optn4Button.innerText=questionArray[currentQuestion].option4;
     //currentQuestion++
     if (questionCount<20){
         questionCount++;
@@ -273,7 +277,10 @@ function finalAnswerA() {
 }
 function finalAnswerB() {
     qustnEl.innerText=questionArray[currentQuestion].question;
+    optn1Button.innerText=questionArray[currentQuestion].option1;
     optn2Button.innerText=questionArray[currentQuestion].option2;
+    optn3Button.innerText=questionArray[currentQuestion].option3;
+    optn4Button.innerText=questionArray[currentQuestion].option4;
     if (questionCount<20){
         questionCount++;
     }else {endQuiz();}
@@ -286,7 +293,10 @@ function finalAnswerB() {
 }
 function finalAnswerC() {
     qustnEl.innerText=questionArray[currentQuestion].question;
+    optn1Button.innerText=questionArray[currentQuestion].option1;
+    optn2Button.innerText=questionArray[currentQuestion].option2;
     optn3Button.innerText=questionArray[currentQuestion].option3;
+    optn4Button.innerText=questionArray[currentQuestion].option4;
     if (currentQuestion<20){
         currentQuestion++;
     }else{endQuiz();}
@@ -298,6 +308,9 @@ function finalAnswerC() {
 }
 function finalAnswerD() {
     qustnEl.innerText=questionArray[currentQuestion].question;
+    optn1Button.innerText=questionArray[currentQuestion].option1;
+    optn2Button.innerText=questionArray[currentQuestion].option2;
+    optn3Button.innerText=questionArray[currentQuestion].option3;
     optn4Button.innerText=questionArray[currentQuestion].option4;
     if (questionCount<20){
         questionCount++;
